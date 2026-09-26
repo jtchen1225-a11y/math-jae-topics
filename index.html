@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>澳門四校聯考（JAE）數學科 2021–2025 真題 8 大黃金專題總複習</title>
+  <meta name="description" content="澳門四高校聯合入學考試數學正卷與附加卷歷屆真題專題總複習 · 一頁一題互動投影簡報系統" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #121929;
+      --card-hover: #172138;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --line: rgba(255, 255, 255, 0.1);
+      --line-glow: rgba(59, 130, 246, 0.3);
+      --font-sans: 'Plus Jakarta Sans', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(circle at 50% -20%, #1e293b 0%, #090d16 80%);
+      color: var(--text);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      line-height: 1.5;
+      padding-bottom: 60px;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    .hero {
+      text-align: center;
+      padding: 56px 20px 36px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      border-radius: 999px;
+      color: #60a5fa;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
+    }
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--text-muted);
+      max-width: 840px;
+      margin: 0 auto 28px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .hero-stat-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 24px;
+      text-align: center;
+      min-width: 130px;
+    }
+    .hero-stat-val {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #38bdf8;
+    }
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Grid of 8 Topics */
+    .topics-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* Topic Card */
+    .topic-card {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .topic-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--topic-color);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px color-mix(in srgb, var(--topic-color) 25%, transparent);
+    }
+    .card-accent {
+      height: 6px;
+      width: 100%;
+    }
+    .card-content {
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .topic-badge {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .topic-icon {
+      font-size: 24px;
+    }
+    .topic-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+    .topic-eng {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .exam-role-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+    .stats-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 11.5px;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .stat-pill b { color: #e2e8f0; }
+    .parts-breakdown {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .topic-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .card-action {
+      margin-top: auto;
+    }
+    .enter-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 0;
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s ease;
+    }
+    .enter-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    .btn-arrow {
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+    .enter-btn:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Features Section */
+    .features-section {
+      max-width: 1280px;
+      margin: 56px auto 0;
+      padding: 0 24px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .feature-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Keyboard shortcuts */
+    .shortcuts-bar {
+      max-width: 1280px;
+      margin: 40px auto 0;
+      padding: 20px 24px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+    .sc-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    kbd {
+      background: #1e293b;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      padding: 2px 7px;
+      font-size: 11px;
+      font-family: monospace;
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .portal-footer {
+      text-align: center;
+      padding: 48px 20px 20px;
+      font-size: 12.5px;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-badge">
+      <span>✦</span> 澳門四高校聯合入學考試 · 2021–2025 官方真題專題化教學系統
+    </div>
+    <h1 class="hero-title">四校聯考數學 8 大黃金專題總複習</h1>
+    <p class="hero-sub">
+      打破傳統按年份刷卷模式，按知識拓撲與思維層次結構化重組！<br>
+      一頁一題 · 左題右解 · 核心考點速查 · 官方 M/A/B 分步踩點評分 · 內建授課板書教具
+    </p>
+
+    <!-- Global Stats -->
+    <div class="hero-stats">
+      <div class="hero-stat-box">
+        <div class="hero-stat-val">8</div>
+        <div class="hero-stat-label">大黃金專題</div>
+      </div>
+      <div class="hero-stat-box">
+        <div class="hero-stat-val">110</div>
+        <div class="hero-stat-label">道精選官方真題</div>
+      </div>
+      <div class="hero-stat-box">
+        <div class="hero-stat-val">1,000+</div>
+        <div class="hero-stat-label">分真題儲備</div>
+      </div>
+      <div class="hero-stat-box">
+        <div class="hero-stat-val">100%</div>
+        <div class="hero-stat-label">M/A/B 官方踩點</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 8 Topics Section -->
+  <main class="topics-container">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title"><span>📚</span> 八大專題互動簡報入口</h2>
+        <p class="section-desc">點擊下方任一專題卡片，即可開啟對應的全功能互動教學簡報（支援投影與黑板精講）</p>
+      </div>
+    </div>
+
+    <div class="topic-grid">
+      
+        <div class="topic-card" style="--topic-color: #2563eb;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #2563eb;">TOPIC 01</span>
+              <span class="topic-icon">📐</span>
+            </div>
+            
+            <h3 class="topic-name">解析幾何與圓錐曲線</h3>
+            <p class="topic-eng">Conic Sections & Coordinate Geometry</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>正卷客觀壓軸 + 正卷解答壓軸 (8分) + 附加卷必考大題 (20分)</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>20</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>180 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 10題 · 正卷解答: 5題 · 附加卷大題: 5題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">直線與圓</span><span class="topic-tag">橢圓/雙曲線/拋物線</span><span class="topic-tag">韋達定理設而不求</span><span class="topic-tag">點差法中點弦</span><span class="topic-tag">垂徑定理</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic01.html" class="enter-btn" style="background: #2563eb;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #6366f1;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #312e81 0%, #6366f1 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #6366f1;">TOPIC 02</span>
+              <span class="topic-icon">📈</span>
+            </div>
+            
+            <h3 class="topic-name">微積分極值與定積分應用</h3>
+            <p class="topic-eng">Calculus: Derivatives, Extrema & Integrals</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>附加卷連續 5 年必出壓軸大題 (20分) + 客觀題</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>7</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>104 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 1題 · 正卷解答: 1題 · 附加卷大題: 5題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">多項式求導</span><span class="topic-tag">單調區間與極值列表</span><span class="topic-tag">過外點切線</span><span class="topic-tag">幾何容積建模</span><span class="topic-tag">定積分面積</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic02.html" class="enter-btn" style="background: #6366f1;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #9333ea;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #581c87 0%, #9333ea 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #9333ea;">TOPIC 03</span>
+              <span class="topic-icon">🌌</span>
+            </div>
+            
+            <h3 class="topic-name">複數代數與複平面幾何</h3>
+            <p class="topic-eng">Complex Numbers & Argand Geometry</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>連續 4 年附加卷 20 分壓軸大題 (A-Q04)</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>7</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>80 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 2題 · 正卷解答: 1題 · 附加卷大題: 4題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">純虛數判定</span><span class="topic-tag">三角形式極坐標</span><span class="topic-tag">棣美弗定理開方</span><span class="topic-tag">單位根正多邊形</span><span class="topic-tag">複數模幾何軌跡</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic03.html" class="enter-btn" style="background: #9333ea;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #059669;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #064e3b 0%, #059669 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #059669;">TOPIC 04</span>
+              <span class="topic-icon">🧮</span>
+            </div>
+            
+            <h3 class="topic-name">矩陣線性方程組與數學歸納法</h3>
+            <p class="topic-eng">Matrices, Linear Systems & MI</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>附加卷保底大題 (20分) + 正卷歸納法大題</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>9</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>128 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 2題 · 正卷解答: 1題 · 附加卷大題: 6題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">二階逆矩陣</span><span class="topic-tag">三階行列式因式分解</span><span class="topic-tag">克萊姆法則</span><span class="topic-tag">方程組相容性討論</span><span class="topic-tag">數學歸納法三步踩分</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic04.html" class="enter-btn" style="background: #059669;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #0284c7;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #0284c7;">TOPIC 05</span>
+              <span class="topic-icon">📦</span>
+            </div>
+            
+            <h3 class="topic-name">立體幾何與空間向量建系</h3>
+            <p class="topic-eng">Solid Geometry & 3D Vector Methods</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>連續 5 年附加卷必選第一題 (A-Q01，20分)</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>8</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>108 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 2題 · 正卷解答: 1題 · 附加卷大題: 5題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">空間坐標建系</span><span class="topic-tag">法向量求法</span><span class="topic-tag">二面角銳鈍判別</span><span class="topic-tag">線面垂直判定</span><span class="topic-tag">等體積法點面距離</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic05.html" class="enter-btn" style="background: #0284c7;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #d97706;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #78350f 0%, #d97706 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #d97706;">TOPIC 06</span>
+              <span class="topic-icon">📐</span>
+            </div>
+            
+            <h3 class="topic-name">三角函數解三角形與平面幾何</h3>
+            <p class="topic-eng">Trigonometry & Euclidean Geometry</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>正卷客觀題主力 + 正卷解答大題必出題型</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>18</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>92 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 11題 · 正卷解答: 6題 · 附加卷大題: 1題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">輔助角公式</span><span class="topic-tag">二倍角降冪</span><span class="topic-tag">正餘弦定理邊角互化</span><span class="topic-tag">三角形面積公式</span><span class="topic-tag">歐氏幾何圓冪證明</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic06.html" class="enter-btn" style="background: #d97706;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #e11d48;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #881337 0%, #e11d48 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #e11d48;">TOPIC 07</span>
+              <span class="topic-icon">🔢</span>
+            </div>
+            
+            <h3 class="topic-name">數列求和與代數不等式</h3>
+            <p class="topic-eng">Sequences, Series & Inequalities</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>正卷分值佔比最高專題（客觀題 + 解答大題）</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>26</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>240 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 15題 · 正卷解答: 10題 · 附加卷大題: 1題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">等差等比通項與求和</span><span class="topic-tag">錯位相減法</span><span class="topic-tag">裂項相消法</span><span class="topic-tag">均值不等式</span><span class="topic-tag">柯西不等式與線性規劃</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic07.html" class="enter-btn" style="background: #e11d48;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="topic-card" style="--topic-color: #0d9488;">
+          <div class="card-accent" style="background: linear-gradient(135deg, #134e4a 0%, #0d9488 100%);"></div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="topic-badge" style="background: #0d9488;">TOPIC 08</span>
+              <span class="topic-icon">🎲</span>
+            </div>
+            
+            <h3 class="topic-name">計數原理二項式定理與概率統計</h3>
+            <p class="topic-eng">Probability, Statistics & Counting</p>
+            
+            <div class="exam-role-box">
+              <span class="exam-role-icon">🎯</span>
+              <span>正卷客觀高頻題 + 概率統計解答大題</span>
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-pill"><span class="stat-icon">📝</span> <b>15</b> 道真題</div>
+              <div class="stat-pill"><span class="stat-icon">🏆</span> <b>68 分</b> 儲備</div>
+            </div>
+
+            <div class="parts-breakdown">
+              客觀題: 11題 · 正卷解答: 3題 · 附加卷大題: 1題
+            </div>
+
+            <div class="tags-container">
+              <span class="topic-tag">相鄰捆綁與不相鄰插空</span><span class="topic-tag">二項式定理通項</span><span class="topic-tag">古典概型與條件概率</span><span class="topic-tag">離散型隨機變量分佈列</span><span class="topic-tag">期望與方差</span>
+            </div>
+
+            <div class="card-action">
+              <a href="topic08.html" class="enter-btn" style="background: #0d9488;">
+                <span>進入專題互動簡報</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </main>
+
+  <!-- Features Grid -->
+  <section class="features-section">
+    <div class="section-head">
+      <h2 class="section-title"><span>⚡</span> 專為課堂投影精講與自主探究打造</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">漸進式三部曲動線</div>
+        <div class="feature-desc">① 審題閱讀 ➔ ② 核心考點&必背公式 ➔ ③ 規範解答與速解訣竅。翻到新題預設隱藏解答，方便老師課堂提問與啟發。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <div class="feature-title">官方 M/A/B 分步踩點</div>
+        <div class="feature-desc">完整還原四校聯考閱卷標準：M分（方法分）、A分（精確計算分）、B分（獨立結果分），讓學生深諳步步搶分策略。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-title">全黑板滿版投影放大</div>
+        <div class="feature-desc">支援快捷鍵 <kbd>Q</kbd> 題目全螢幕放大、<kbd>K</kbd> 知識點放大、<kbd>A</kbd> 規範解答全黑板展開，字體自適應黑板投影超清晰。</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🖊️</div>
+        <div class="feature-title">專業授課互動教具</div>
+        <div class="feature-desc">內建紅色虛擬雷射筆（<kbd>L</kbd> 鍵含拖尾效果）、5 色板書塗鴉畫筆（<kbd>P</kbd> 鍵）、一鍵清除筆跡（<kbd>C</kbd> 鍵），課堂講解得心應手。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shortcuts Bar -->
+  <div class="shortcuts-bar">
+    <div class="sc-item"><kbd>→</kbd> / <kbd>Space</kbd> 漸進推進下一步</div>
+    <div class="sc-item"><kbd>←</kbd> 回退上一步</div>
+    <div class="sc-item"><kbd>K</kbd> 揭曉/收起考點</div>
+    <div class="sc-item"><kbd>A</kbd> 揭曉/收起解答</div>
+    <div class="sc-item"><kbd>Q</kbd> 全螢幕放大題目</div>
+    <div class="sc-item"><kbd>L</kbd> 開關雷射筆</div>
+    <div class="sc-item"><kbd>P</kbd> 開關板書畫筆</div>
+    <div class="sc-item"><kbd>C</kbd> 清除當前筆跡</div>
+  </div>
+
+  <footer class="portal-footer">
+    <p>澳門四高校聯合入學考試（語言科及數學科）2021–2025 真題專題分類講義與互動教學簡報系統</p>
+    <p style="margin-top:6px; opacity:0.7;">Powered by math-review-deck · 純前端零相依 · MathJax LaTeX 排版 · 向量 SVG 教具</p>
+  </footer>
+</body>
+</html>
