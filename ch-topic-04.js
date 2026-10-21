@@ -60,14 +60,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "\\det(A) = ad - bc = 2(3) - 1(5) = 1",
+            "A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\implies A^{-1} = \\frac{1}{\\det(A)}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} = \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>二階伴隨矩陣主對調副變號口訣</b>：主對角線兩元素互換位置，副對角線兩元素保持位置但全部變號，最後整體除以行列式 $\\det(A)$。",
+            "<b>矩陣乘法快速驗算</b>：$A A^{-1} = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix} \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} = \\begin{pmatrix} 6-5 & -2+2 \\\\ 15-15 & -5+6 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = I$。"
           ],
-          "pitfall": "<b>無窮多解未寫出「通解表達式」</b>：當方程組有無限多解時，很多考生僅回答「當 $k=1$ 時有無限多解」，卻沒有寫出通解 $(x, y, z) = (1 - t, 2t, t)$。在官方標準中，通解表達式佔據 2～3 分【A分】。"
+          "pitfall": "<b>副對角線元素位置或符號搞反</b>：易誤將副對角線元素也對調，或忘記除以係數行列式。"
         },
         "solution": {
           "thinking": "$\\det(A) = 2(3) - 1(5) = 6 - 5 = 1$。",
@@ -95,14 +95,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "\\det\\begin{pmatrix} a_{11} & a_{12} & a_{13} \\\\ 0 & a_{22} & a_{23} \\\\ 0 & 0 & a_{33} \\end{pmatrix} = a_{11} a_{22} a_{33}",
+            "D = 1 \\times 4 \\times 6 = 24"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>三角矩陣秒殺性質</b>：上（下）三角行列式的主對角線下方元素全為 0，其行列式的值直接等於主對角線上所有元素的連乘積。",
+            "<b>高斯消元法的終局形式</b>：三階線性方程組消元後化為階梯形矩陣，其主對角線乘積即為係數矩陣行列式。"
           ],
-          "pitfall": "<b>數學歸納法遞推步未顯式引用歸納假設</b>：在由 $n=k$ 推導 $n=k+1$ 的過程中，必須寫明「由歸納假設……」，將假設表達式整體代入。若跳步或直接默認成立，直接扣除 2 分【M分】。"
+          "pitfall": "<b>套用沙路法則重複繁冗計算</b>：忽視三角矩陣直接相乘定理，盲目展開容易在符號連乘時算錯。"
         },
         "solution": {
           "thinking": "上三角行列式的值等於主對角線元素之乘積：$D = 1 \\times 4 \\times 6 = 24$。",
@@ -136,14 +136,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "\\text{奠基步：} n = 1 \\implies 7^1 + 4^1 - 2 = 9 = 3 \\times 3 \\ (\\text{能被 3 整除})",
+            "\\text{歸納假設：設 } n = k \\text{ 成立，即 } 7^k + 4^k - 2 = 3M \\ (M \\in \\mathbb{Z})",
+            "7^{k+1} + 4^{k+1} - 2 = 7(7^k + 4^k - 2) - 3(4^k) + 12 = 3[7M - 4^k + 4]"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>數學歸納法三段式嚴格書寫</b>：(1) 奠基步驗證 $n = 1$；(2) 歸納假設明確設出整數倍 $3M$；(3) 遞推步必須顯式代入 $n = k$ 的歸納假設證明 $n = k + 1$ 成立。",
+            "<b>拆項構造配湊技巧</b>：將 $7^{k+1}$ 拆為 $7 \\times 7^k$，將式子配成 $7(7^k + 4^k - 2)$，多出的項化為 $3 \\times (\\dots)$，提取公因數 3 證畢。"
           ],
-          "pitfall": "<b>無窮多解未寫出「通解表達式」</b>：當方程組有無限多解時，很多考生僅回答「當 $k=1$ 時有無限多解」，卻沒有寫出通解 $(x, y, z) = (1 - t, 2t, t)$。在官方標準中，通解表達式佔據 2～3 分【A分】。"
+          "pitfall": "<b>在遞推步未明確引用歸納假設</b>：若直接使用二項式定理展開證明，四校聯考「用數學歸納法證明」將拿不到歸納過程 M分。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -177,14 +178,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "\\sin\\alpha\\sin\\beta = \\frac{1}{2}[\\cos(\\alpha - \\beta) - \\cos(\\alpha + \\beta)]",
+            "2\\sin\\frac{\\theta}{2}\\cos k\\theta = \\sin\\left(k + \\frac{1}{2}\\right)\\theta - \\sin\\left(k - \\frac{1}{2}\\right)\\theta",
+            "\\sum_{k=1}^n \\cos k\\theta = \\frac{\\sin(n + \\frac{1}{2})\\theta - \\sin\\frac{\\theta}{2}}{2\\sin\\frac{\\theta}{2}} = \\frac{\\sin\\frac{n\\theta}{2}\\cos\\frac{(n+1)\\theta}{2}}{\\sin\\frac{\\theta}{2}}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>積化和差引理輔助證明</b>：(a) 問由餘弦差角和角展開相減直接得積化和差恆等式，作為 (b) 問數學歸納法通分時的關鍵工具。",
+            "<b>裂項相消與三角求和</b>：利用兩邊同乘 $2\\sin\\frac{\\theta}{2}$ 實現正弦裂項相消，或在歸納法遞推步中通分將乘積化為差式。"
           ],
-          "pitfall": "<b>無窮多解未寫出「通解表達式」</b>：當方程組有無限多解時，很多考生僅回答「當 $k=1$ 時有無限多解」，卻沒有寫出通解 $(x, y, z) = (1 - t, 2t, t)$。在官方標準中，通解表達式佔據 2～3 分【A分】。"
+          "pitfall": "<b>和角公式展開符號錯誤</b>：$\\cos(\\alpha+\\beta) = \\cos\\alpha\\cos\\beta - \\sin\\alpha\\sin\\beta$，相減時負負得正注意係數 1/2。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -207,14 +209,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "D = \\begin{vmatrix} x & a & a \\\\ a & x & a \\\\ a & a & x \\end{vmatrix} = (x + 2a)(x - a)^2",
+            "\\text{克萊姆法則：} D \\neq 0 \\iff x \\neq a \\text{ 且 } x \\neq -2a \\implies \\text{唯一解}",
+            "D = 0 \\iff x = a \\text{ 或 } x = -2a \\implies \\text{無窮多解或無解}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>各行（列）相加提取公因式</b>：將第 2、3 行全部加到第 1 行，第 1 行全變為 $x + 2a$，提出公因式後做初等行變換製造零元素，化為上三角行列式得到 $(x+2a)(x-a)^2$。",
+            "<b>線性方程組解的分類討論</b>：當行列式 $D \\neq 0$ 時方程組有唯一解；當 $D = 0$ 時必須將特徵值分別代回增廣矩陣討論解的個數。"
           ],
-          "pitfall": "<b>數學歸納法遞推步未顯式引用歸納假設</b>：在由 $n=k$ 推導 $n=k+1$ 的過程中，必須寫明「由歸納假設……」，將假設表達式整體代入。若跳步或直接默認成立，直接扣除 2 分【M分】。"
+          "pitfall": "<b>因式分解遺漏重根平方項</b>：在行變換減法時，提取 $(x+2a)$ 後忽視剩餘二階行列式為完全平方 $(x-a)^2$。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -236,14 +239,14 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "V_3 = \\begin{vmatrix} 1 & 1 & 1 \\\\ a & b & c \\\\ a^2 & b^2 & c^2 \\end{vmatrix} = (b - a)(c - a)(c - b)",
+            "r_3 - a \\cdot r_2, \\quad r_2 - a \\cdot r_1 \\implies \\text{製造零元素降階}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>范德蒙德行列式標準推導</b>：第 3 行減去 $a \\times$ 第 2 行，第 2 行減去 $a \\times$ 第 1 行，第 1 列降階展開，提出公因式 $(b-a)(c-a)$，直接得出 $(b-a)(c-a)(c-b)$。",
+            "<b>非零解條件判定</b>：方程組有唯一解充要條件是三參數兩兩互不相等（$a \\neq b, b \\neq c, c \\neq a$）。"
           ],
-          "pitfall": "<b>二階逆矩陣符號混淆</b>：二階矩陣 $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ 的逆矩陣口訣是「主對角互換、副對角變號、除以行列式」，副對角元素 $-b, -c$ 容易漏掉負號。\n\n---"
+          "pitfall": "<b>因式輪換順序符號出錯</b>：范德蒙德因式乘積口訣為「後減前」：$(b-a)(c-a)(c-b)$，若寫成 $(a-b)(b-c)(c-a)$ 會多出一個負號。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -265,14 +268,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "\\cos 2\\theta = 2\\cos^2\\theta - 1 = \\cos^2\\theta - \\sin^2\\theta = 1 - 2\\sin^2\\theta",
+            "\\det\\begin{pmatrix} \\cos 2\\theta & \\cos\\theta \\\\ \\cos\\theta & 1 \\end{pmatrix} = \\cos 2\\theta - \\cos^2\\theta = \\cos^2\\theta - 1 = -\\sin^2\\theta",
+            "\\cos\\theta \\in [-1, 1]"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>三角二倍角統角化名</b>：利用 $\\cos 2\\theta = 2\\cos^2\\theta - 1$ 將行列式元素統一為 $\\cos\\theta$ 的代數表達式，再進行因式分解與方程求解。",
+            "<b>三角函數有界性檢驗</b>：代數方程求出解後，必須檢驗根是否落在三角函數定義域 $[-1, 1]$ 內，排除無效增根。"
           ],
-          "pitfall": "<b>無窮多解未寫出「通解表達式」</b>：當方程組有無限多解時，很多考生僅回答「當 $k=1$ 時有無限多解」，卻沒有寫出通解 $(x, y, z) = (1 - t, 2t, t)$。在官方標準中，通解表達式佔據 2～3 分【A分】。"
+          "pitfall": "<b>忽略 $|\\cos\\theta| \\le 1$ 導致增根未排除</b>：代數方程解出 $|t| > 1$ 的無效解未予捨去會被扣除結論分。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -295,14 +299,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "D(\\theta) = \\begin{vmatrix} \\sin\\theta & \\cos\\theta & 1 \\\\ \\cos\\theta & \\sin\\theta & 1 \\\\ 1 & 1 & \\sin 2\\theta \\end{vmatrix} = 0",
+            "r_1 - r_2 \\implies (\\sin\\theta - \\cos\\theta, \\cos\\theta - \\sin\\theta, 0) = (\\sin\\theta - \\cos\\theta)(1, -1, 0)",
+            "\\sin\\theta = \\cos\\theta \\implies \\tan\\theta = 1 \\implies \\theta = \\frac{\\pi}{4} + k\\pi"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>對稱行變換製造公因式</b>：觀測到前兩行元素對稱，執行 $r_1 - r_2$ 迅速提取公因式 $(\\sin\\theta - \\cos\\theta)$，化簡降階求出其餘因式。",
+            "<b>三角方程分類精確求解</b>：分解為 $\\sin\\theta = \\cos\\theta$ 或 $\\sin 2\\theta = 1$，寫出給定區間內的全部實數解。"
           ],
-          "pitfall": "<b>數學歸納法遞推步未顯式引用歸納假設</b>：在由 $n=k$ 推導 $n=k+1$ 的過程中，必須寫明「由歸納假設……」，將假設表達式整體代入。若跳步或直接默認成立，直接扣除 2 分【M分】。"
+          "pitfall": "<b>行變換提取公因式時符號算錯</b>：$\\cos\\theta - \\sin\\theta = -(\\sin\\theta - \\cos\\theta)$，提取公因式時第二項必須帶負號。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -324,14 +329,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "A^{-1} = \\frac{1}{ad - bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
-            "\\text{左邊} = \\text{前 } k \\text{ 項} + \\text{第 } (k+1) \\text{ 項} = \\text{【代入歸納假設】} + \\dots = \\dots = \\text{右邊}"
+            "D = \\begin{vmatrix} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\end{vmatrix} = (b - a)(c - a)(c - b)",
+            "D \\neq 0 \\iff a \\neq b, b \\neq c, c \\neq a \\implies \\text{方程組有唯一解}",
+            "D = 0 \\implies \\text{代入增廣矩陣化行階梯形討論解的個數}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>克萊姆法則係數行列式判定</b>：計算係數行列式 $D$，找出使其為零的參數值，明確唯一解的參數取值範圍。",
+            "<b>奇異參數增廣矩陣階梯化</b>：將特異值代回原方程組增廣矩陣，若出現 $[0 \\ 0 \\ 0 \\mid k]$ ($k \\neq 0$) 則無解；若出現全零行且無矛盾則有無限多解。"
           ],
-          "pitfall": "<b>二階逆矩陣符號混淆</b>：二階矩陣 $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ 的逆矩陣口訣是「主對角互換、副對角變號、除以行列式」，副對角元素 $-b, -c$ 容易漏掉負號。\n\n---"
+          "pitfall": "<b>武斷認定 $D = 0$ 必為「無窮多解」</b>：$D = 0$ 時方程組完全可能矛盾無解，必須代入增廣矩陣驗證最後一行的相容性。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",

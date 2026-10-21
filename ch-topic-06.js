@@ -60,13 +60,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "|O_1 O_2| = r_1 + r_2 = 2 + 2 = 4 \\text{ cm}",
+            "S_{\\text{扇形}} = \\frac{1}{2}\\alpha r^2 = \\frac{n\\pi r^2}{360^\\circ}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>圓外切圓心距幾何性質</b>：兩圓外切時，圓心距等於兩半徑之和，即 $|O_1 O_2| = 4$ cm。",
+            "<b>割補法求幾何重疊面積</b>：利用矩形與切線的軸對稱性，將不規則重疊圖形分割為扇形與直角三角形進行求和計算。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>外切與內切圓心距混淆</b>：外切圓心距為 $r_1 + r_2$，內切圓心距為 $|r_1 - r_2|$，切勿記混。"
         },
         "solution": {
           "thinking": "兩圓面積和為 $2 \\times \\pi(2)^2 = 8\\pi$。",
@@ -95,13 +96,15 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "T = \\frac{2\\pi}{\\omega} \\implies \\omega = \\frac{2\\pi}{T}",
+            "A = \\frac{y_{\\max} - y_{\\min}}{2}, \\quad k = \\frac{y_{\\max} + y_{\\min}}{2}",
+            "f(x) = A\\sin(\\omega x + \\phi) + k"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>五點作圖法逆向讀圖</b>：從圖像最高點與最低點讀出振幅 $A$ 與上下平移量 $k$；由相鄰峰谷水平距離半週期讀出角頻率 $\\omega$。",
+            "<b>初相求解驗證</b>：代入已知最高點坐標 $(\\bar{x}, y_{\\max})$，利用 $\\omega \\bar{x} + \\phi = \\frac{\\pi}{2} + 2k\\pi$ 唯一確定初相 $\\phi$。"
           ],
-          "pitfall": "<b>輔助角公式初相 $\\phi$ 正負符號搞錯</b>：$a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x + \\phi)$，其中點 $(a, b)$ 所在象限決定 $\\phi$。例如 $\\sqrt{3}\\sin x - \\cos x = 2\\sin(x - \\frac{\\pi}{6})$，很多考生誤寫為 $+ \\frac{\\pi}{6}$。"
+          "pitfall": "<b>初相多值性與增減性矛盾</b>：代入零點求解初相時，必須驗證函數在該點是處於上升還是下降階段，否則會算出相反的相位。"
         },
         "solution": {
           "thinking": "振幅 $A = \\frac{5 - 1}{2} = 2$，垂直位移 $k = \\frac{5 + 1}{2} = 3$。",
@@ -128,13 +131,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "(r_1 + r_2)^2 = (r_1 - r_2)^2 + d^2",
+            "\\text{兩外切圓公切線長 } d = 2\\sqrt{r_1 r_2}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>切圓公切線長公式</b>：兩半徑為 $r_1, r_2$ 的外切圓與同一直線相切時，兩切點間的距離為 $d = 2\\sqrt{r_1 r_2}$。",
+            "<b>幾何勾股關係聯立</b>：以兩圓心水平距離與垂直高度差構造直角三角形，求解中間內夾圓半徑或封閉區域幾何量。"
           ],
-          "pitfall": "<b>二倍角降冪係數遺漏除以 2</b>：$\\cos^2 x = \\frac{1 + \\cos 2x}{2}$，常有考生漏寫分母 2。\n\n---"
+          "pitfall": "<b>根式化簡開方符號錯誤</b>：高度差 $R - r$ 在勾股定理展開時注意平方差抵消項。"
         },
         "solution": {
           "thinking": "三個半徑為 $R$ 的圓兩兩外切且與直線相切，根據笛卡爾幾何關係，對應常數為 $\\frac{\\sqrt{3}}{2}R$。",
@@ -161,13 +165,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "c^2 = a^2 + b^2 - 2ab\\cos C \\quad (\\text{餘弦定理})",
+            "\\text{方位角內角轉化：} C = 180^\\circ - (60^\\circ + \\dots)"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>方位角轉化為三角形內角</b>：以南北方向為基準線，利用兩平行線內錯角計算兩航向之間的轉折角，得出三角形內角 $C$。",
+            "<b>餘弦定理直接求第三邊長</b>：已知兩航行距離邊長與夾角，套用餘弦定理求起點與終點之間的直線距離。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>方位角互餘互補角搞混</b>：北偏東 $60^\\circ$ 與航行路線的幾何夾角必須在草圖上嚴格標註，切勿將航向角直接當作內角。"
         },
         "solution": {
           "thinking": "在 $\\triangle ABC$ 中，輪船從港口 $A$ 沿北偏東 $60^\\circ$ 航行 20 海里到 $B$，再沿南偏東 $30^\\circ$ 航行 $20\\sqrt{3}$ 海里到 $C$。",
@@ -195,13 +200,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\sin^2\\alpha + \\cos^2\\alpha = 1 \\implies \\cos\\alpha = -\\sqrt{1 - \\left(\\frac{3}{5}\\right)^2} = -\\frac{4}{5}",
+            "\\cos(\\alpha + \\beta) = \\cos\\alpha\\cos\\beta - \\sin\\alpha\\sin\\beta"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>象限確定三角函數符號</b>：$\\alpha$ 在第二象限，正弦為正、餘弦為負，精確得出 $\\cos\\alpha = -4/5$。",
+            "<b>和角公式展開精確代入</b>：代入特殊角餘弦與正弦值展開計算，注意負負得正的符號變化。"
           ],
-          "pitfall": "<b>輔助角公式初相 $\\phi$ 正負符號搞錯</b>：$a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x + \\phi)$，其中點 $(a, b)$ 所在象限決定 $\\phi$。例如 $\\sqrt{3}\\sin x - \\cos x = 2\\sin(x - \\frac{\\pi}{6})$，很多考生誤寫為 $+ \\frac{\\pi}{6}$。"
+          "pitfall": "<b>第二象限餘弦忘記負號</b>：粗心誤寫成 $\\cos\\alpha = +4/5$ 導致整個選項符號顛倒。"
         },
         "solution": {
           "thinking": "$\\alpha$ 在第二象限，$\\cos\\alpha = -\\sqrt{1 - (3/5)^2} = -\\frac{4}{5}$。",
@@ -228,13 +234,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "y = 2\\sin(2x + \\phi) \\implies \\sin(2x_0 + \\phi) = \\frac{y_0}{2}",
+            "|\\phi| < \\frac{\\pi}{2}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>代入點坐標求解初相</b>：將已知圖像經過的點坐標代入函數解析式，得到關於 $2x_0 + \\phi$ 的基本三角方程。",
+            "<b>定義域限制排除增根</b>：利用初相範圍 $|\\phi| < \\frac{\\pi}{2}$ 篩選唯一合適的初相值。"
           ],
-          "pitfall": "<b>二倍角降冪係數遺漏除以 2</b>：$\\cos^2 x = \\frac{1 + \\cos 2x}{2}$，常有考生漏寫分母 2。\n\n---"
+          "pitfall": "<b>忽略初相範圍限制多選增根</b>：未看清 $|\\phi| < \\pi/2$ 的區間限制，誤取其他週期解。"
         },
         "solution": {
           "thinking": "$\\cos 2\\theta = 2\\cos^2\\theta - 1 = 2(-\\frac{1}{3})^2 - 1 = \\frac{2}{9} - 1 = -\\frac{7}{9}$。",
@@ -261,13 +268,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R",
+            "S = \\frac{1}{2}ab\\sin C"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>正弦定理邊角互化</b>：利用已知邊長與正弦值計算其餘角的正弦值或三角形面積。",
+            "<b>銳角三角形嚴格排除鈍角</b>：銳角三角形要求三個內角均在 $(0, \\pi/2)$ 內，解出正弦值若有兩角可能，必須捨去鈍角。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>解三角形正弦雙解未捨去鈍角</b>：$\\sin B = \\sqrt{3}/2$ 對應 $60^\\circ$ 或 $120^\\circ$，題目註明「銳角三角形」必須排除 $120^\\circ$。"
         },
         "solution": {
           "thinking": "由正弦定理 $\\frac{a}{\\sin A} = \\frac{b}{\\sin B} \\implies \\frac{\\sqrt{6}}{\\sin 60^\\circ} = \\frac{2}{\\sin B} \\implies \\sin B = \\frac{2 \\times (\\sqrt{3}/2)}{\\sqrt{6}} = \\frac{\\sqrt{2}}{2}$。",
@@ -294,13 +302,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "2k\\pi - \\pi \\le 2x - \\frac{\\pi}{4} \\le 2k\\pi \\quad (\\text{餘弦單調遞增區間})",
+            "k\\pi - \\frac{3\\pi}{8} \\le x \\le k\\pi + \\frac{\\pi}{8} \\quad (k \\in \\mathbb{Z})"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>整體換元法解單調區間</b>：令整體變量 $u = 2x - \\pi/4$，利用餘弦函數在 $[-\\pi + 2k\\pi, 2k\\pi]$ 上單調遞增列出不等式求解 $x$。",
+            "<b>取 $k = 0$ 匹配選項</b>：當 $k = 0$ 時得到遞增區間 $[-\\frac{3\\pi}{8}, \\frac{\\pi}{8}]$，對應正確選項。"
           ],
-          "pitfall": "<b>輔助角公式初相 $\\phi$ 正負符號搞錯</b>：$a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x + \\phi)$，其中點 $(a, b)$ 所在象限決定 $\\phi$。例如 $\\sqrt{3}\\sin x - \\cos x = 2\\sin(x - \\frac{\\pi}{6})$，很多考生誤寫為 $+ \\frac{\\pi}{6}$。"
+          "pitfall": "<b>餘弦單調增減區間與正弦搞混</b>：餘弦在 $[0, \\pi]$ 遞減、在 $[-\\pi, 0]$ 遞增，切勿誤套正弦的 $[-\\pi/2, \\pi/2]$ 遞增公式。"
         },
         "solution": {
           "thinking": "令 $2k\\pi - \\pi \\le 2x - \\frac{\\pi}{4} \\le 2k\\pi \\implies k\\pi - \\frac{3\\pi}{8} \\le x \\le k\\pi + \\frac{\\pi}{8}$。",
@@ -327,13 +336,15 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\cos 2\\theta = 1 - 2\\sin^2\\theta",
+            "(1 - 2\\sin^2\\theta) + 3\\sin\\theta - 2 = 0 \\implies 2\\sin^2\\theta - 3\\sin\\theta + 1 = 0",
+            "(2\\sin\\theta - 1)(\\sin\\theta - 1) = 0 \\implies \\sin\\theta = \\frac{1}{2} \\text{ 或 } \\sin\\theta = 1"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>二倍角公式化為同名一元二次方程</b>：利用 $\\cos 2\\theta = 1 - 2\\sin^2\\theta$ 統一名稱為 $\\sin\\theta$，十字相乘因式分解求出根。",
+            "<b>開區間端點排除</b>：已知 $\\theta \\in (0, \\pi/2)$ 為開區間，$\\sin\\theta = 1 \\implies \\theta = \\pi/2$ 端點不在區間內，故 $\\sin\\theta = 1/2 \\implies \\theta = \\pi/6$。"
           ],
-          "pitfall": "<b>二倍角降冪係數遺漏除以 2</b>：$\\cos^2 x = \\frac{1 + \\cos 2x}{2}$，常有考生漏寫分母 2。\n\n---"
+          "pitfall": "<b>忽視開區間條件納入端點解</b>：將 $\\theta = \\pi/2$ 誤當作有效解代入干擾選項。"
         },
         "solution": {
           "thinking": "$\\sin\\theta + \\cos\\theta = \\frac{1}{5}$。",
@@ -360,13 +371,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "f\\left(x + \\frac{\\pi}{2}\\right) = \\left|\\sin\\left(x + \\frac{\\pi}{2}\\right)\\right| + \\left|\\cos\\left(x + \\frac{\\pi}{2}\\right)\\right| = |\\cos x| + |-\\sin x| = f(x) \\implies T = \\frac{\\pi}{2}",
+            "f^2(x) = \\sin^2 x + \\cos^2 x + 2|\\sin x\\cos x| = 1 + |\\sin 2x| \\in [1, 2] \\implies f(x) \\in [1, \\sqrt{2}]"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>平方分析法求絕對值三角函數值域</b>：對 $f(x)$ 進行平方展開得 $1 + |\\sin 2x|$。因 $|\\sin 2x| \\in [0, 1]$，故 $f(x)$ 最小值為 1，最大值為 $\\sqrt{2}$。",
+            "<b>自變量平移證明最小正週期</b>：代入 $x + \\pi/2$ 利用誘導公式驗證函數完全重合，得出週期縮短為 $\\pi/2$。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>誤將週期當成 $\\pi$ 或 $2\\pi$</b>：未看出 $x \\to x + \\pi/2$ 時正弦與餘弦正好互換，導致誤判週期。"
         },
         "solution": {
           "thinking": "$c^2 = a^2 + b^2 - 2ab\\cos C = 9 + 25 - 2(3)(5)(\\frac{1}{2}) = 34 - 15 = 19 \\implies c = \\sqrt{19}$。",
@@ -393,13 +405,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\frac{\\sin 2\\alpha}{\\cos^2\\alpha - \\sin^2\\alpha} = \\frac{2\\sin\\alpha\\cos\\alpha}{\\cos^2\\alpha - \\sin^2\\alpha} = \\frac{2\\tan\\alpha}{1 - \\tan^2\\alpha} = \\tan 2\\alpha",
+            "\\tan 2\\alpha = \\frac{2(2)}{1 - 2^2} = \\frac{4}{-3} = -\\frac{4}{3}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>弦化切齊次式代換</b>：展開分子為 $2\\sin\\alpha\\cos\\alpha$，分子分母同除以 $\\cos^2\\alpha$ 直接全部轉化為 $\\tan\\alpha$ 的有理式。",
+            "<b>正切二倍角公式秒殺</b>：原式等價於 $\\tan 2\\alpha = \\frac{2\\tan\\alpha}{1 - \\tan^2\\alpha}$，代入 $\\tan\\alpha = 2$ 直接得出 $-4/3$。"
           ],
-          "pitfall": "<b>輔助角公式初相 $\\phi$ 正負符號搞錯</b>：$a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x + \\phi)$，其中點 $(a, b)$ 所在象限決定 $\\phi$。例如 $\\sqrt{3}\\sin x - \\cos x = 2\\sin(x - \\frac{\\pi}{6})$，很多考生誤寫為 $+ \\frac{\\pi}{6}$。"
+          "pitfall": "<b>分母符號遺漏負號</b>：分母為 $1 - 4 = -3$，負號容易漏寫錯選正值。"
         },
         "solution": {
           "thinking": "已知 $\\tan\\alpha = 2$。",
@@ -435,13 +448,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R",
+            "A + B + C = \\pi \\implies \\sin(A + C) = \\sin B, \\ \\cos(A + C) = -\\cos B",
+            "S_{\\triangle ABC} = \\frac{1}{2}ac\\sin B"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>正弦定理邊角互化</b>：利用邊長關係轉化為三角恆等式，運用和差化積與誘導公式消去公共因子。",
+            "<b>內角和定理求角並求最大面積</b>：求得內角 $B$ 後，結合均值不等式 $ac \\le \\frac{a^2+c^2}{2}$ 或餘弦定理求解三角形最大面積。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>誘導公式負號遺漏</b>：$\\cos(A + C) = -\\cos B$，若漏掉負號將導致求得的角互補。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -463,13 +478,14 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "f(x) = \\sqrt{3}\\sin 2x + \\cos 2x = 2\\left(\\frac{\\sqrt{3}}{2}\\sin 2x + \\frac{1}{2}\\cos 2x\\right) = 2\\sin\\left(2x + \\frac{\\pi}{6}\\right)",
+            "T = \\frac{2\\pi}{2} = \\pi, \\quad f_{\\max} = 2"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>輔助角公式化一標準型</b>：提出 $\\sqrt{(\\sqrt{3})^2 + 1^2} = 2$，化為單一正弦函數 $2\\sin(2x + \\pi/6)$，讀出週期 $T = \\pi$ 與最大值 2。",
+            "<b>閉區間整體換元求極值</b>：若給定 $x \\in [0, \\pi/2]$，推導整體角 $2x + \\pi/6 \\in [\\pi/6, 7\\pi/6]$，精確求解區間最值。"
           ],
-          "pitfall": "<b>輔助角公式初相 $\\phi$ 正負符號搞錯</b>：$a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x + \\phi)$，其中點 $(a, b)$ 所在象限決定 $\\phi$。例如 $\\sqrt{3}\\sin x - \\cos x = 2\\sin(x - \\frac{\\pi}{6})$，很多考生誤寫為 $+ \\frac{\\pi}{6}$。"
+          "pitfall": "<b>輔助角初相角度算錯</b>：$\\cos\\phi = \\sqrt{3}/2, \\sin\\phi = 1/2 \\implies \\phi = \\pi/6$，常有考生誤寫為 $\\pi/3$。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -491,13 +507,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "2\\cos^2 x - 1 = \\cos 2x, \\quad 2\\sqrt{3}\\sin x\\cos x = \\sqrt{3}\\sin 2x",
+            "f(x) = \\sqrt{3}\\sin 2x + \\cos 2x = 2\\sin\\left(2x + \\frac{\\pi}{6}\\right)",
+            "2k\\pi - \\frac{\\pi}{2} \\le 2x + \\frac{\\pi}{6} \\le 2k\\pi + \\frac{\\pi}{2}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>降冪公式與倍角公式聯合化簡</b>：利用二倍角公式將平方二次項降為一次項，再由輔助角公式化為 $2\\sin(2x + \\pi/6)$。",
+            "<b>單調區間嚴格解不等式</b>：解 $2x + \\pi/6 \\in [-\\pi/2 + 2k\\pi, \\pi/2 + 2k\\pi]$ 得到單調遞增區間 $[-\\frac{\\pi}{3} + k\\pi, \\frac{\\pi}{6} + k\\pi]$。"
           ],
-          "pitfall": "<b>二倍角降冪係數遺漏除以 2</b>：$\\cos^2 x = \\frac{1 + \\cos 2x}{2}$，常有考生漏寫分母 2。\n\n---"
+          "pitfall": "<b>降冪公式常數項漏算</b>：$2\\cos^2 x - 1 = \\cos 2x$ 正好與原式常數項抵消，若拆開算容易漏掉常數項。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -519,13 +537,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\beta = (\\alpha + \\beta) - \\alpha",
+            "\\cos\\beta = \\cos(\\alpha+\\beta)\\cos\\alpha + \\sin(\\alpha+\\beta)\\sin\\alpha",
+            "\\sin\\beta = \\sin(\\alpha+\\beta)\\cos\\alpha - \\cos(\\alpha+\\beta)\\sin\\alpha"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>拆角配角法經典技巧</b>：無需單獨求出角 $\\alpha$ 與 $\\beta$ 的具體度數，利用恆等式 $\\beta = (\\alpha+\\beta) - \\alpha$ 展開最為簡捷規範。",
+            "<b>鈍角象限正負號核驗</b>：由 $\\cos(\\alpha+\\beta) < 0$ 確定 $\\alpha+\\beta$ 為第二象限角，其正弦必為正值 $\\sin(\\alpha+\\beta) = 12/13$。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>差角餘弦展開符號記混</b>：$\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$，中間為加號切勿記成減號。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -547,13 +567,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}",
+            "a^2 = b^2 + c^2 - 2bc\\cos A",
+            "\\sin C = \\sin(A + B)"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>邊角互化判定三角形形狀</b>：將角條件通過正弦定理轉為邊長關係，推導出等腰三角形或直角三角形結論。",
+            "<b>代數恆等因式分解</b>：展開後移項因式分解得出 $(a - b)(a^2 + b^2 - c^2) = 0$。"
           ],
-          "pitfall": "<b>輔助角公式初相 $\\phi$ 正負符號搞錯</b>：$a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x + \\phi)$，其中點 $(a, b)$ 所在象限決定 $\\phi$。例如 $\\sqrt{3}\\sin x - \\cos x = 2\\sin(x - \\frac{\\pi}{6})$，很多考生誤寫為 $+ \\frac{\\pi}{6}$。"
+          "pitfall": "<b>忽視等腰或直角雙重可能</b>：若條件推導出兩個分支，解答題需分別討論兩者是否皆符合題意。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -575,13 +597,14 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "AB = AC \\implies \\angle B = \\angle C \\quad (\\text{等腰三角形底角相等})",
+            "\\frac{AD}{\\sin\\angle ACD} = \\frac{CD}{\\sin\\angle A}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>正弦定理在子三角形中的比例應用</b>：在相鄰分割的子三角形中分別列出正弦定理比例式，利用公共邊或相等角消元。",
+            "<b>相似與全等幾何推理規範</b>：寫出邊角對應關係，推導出線段長度或比例結論。"
           ],
-          "pitfall": "<b>二倍角降冪係數遺漏除以 2</b>：$\\cos^2 x = \\frac{1 + \\cos 2x}{2}$，常有考生漏寫分母 2。\n\n---"
+          "pitfall": "<b>子三角形頂點字母順序未對應</b>：解答題書寫幾何比例式時頂點順序需嚴格一致。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -616,13 +639,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "a\\sin x + b\\cos x = \\sqrt{a^2 + b^2} \\sin(x + \\phi) \\quad \\text{其中 } \\tan\\phi = \\frac{b}{a}"
+            "B + D = 180^\\circ \\implies \\cos D = -\\cos B \\quad (\\text{圓內接四邊形對角互補})",
+            "AC^2 = 2^2 + 3^2 - 2(2)(3)\\cos B = 4^2 + 5^2 - 2(4)(5)\\cos D",
+            "S = \\sqrt{(s-a)(s-b)(s-c)(s-d)}, \\quad s = \\frac{a+b+c+d}{2}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>對角互補聯立餘弦定理</b>：在 $\\triangle ABC$ 與 $\\triangle ADC$ 中分別對公共對角線 $AC$ 應用餘弦定理，利用 $\\cos D = -\\cos B$ 列出等式直接解出 $\\cos B = -\\frac{7}{13}$。",
+            "<b>雙三角形面積求和</b>：$S = \\frac{1}{2}(2)(3)\\sin B + \\frac{1}{2}(4)(5)\\sin B = 13\\sin B$，代入 $\\sin B = \\sqrt{1 - \\cos^2 B}$ 求得精確面積。"
           ],
-          "pitfall": "<b>三角形內角範圍約束被忽略</b>：由正弦值 $\\sin A = \\frac{1}{2}$ 求角時，存在 $A = 30^\\circ$ 或 $A = 150^\\circ$ 兩種可能，很多考生漏掉鈍角解；反之，若已知 $a < b$，則由「大邊對大角」必有 $A < B$，必須排除鈍角增解。未寫排除理由直接扣 1 分【A分】。"
+          "pitfall": "<b>圓內接四邊形對角誤記為相等</b>：切勿將對角互補誤記為 $\\cos B = \\cos D$。"
         },
         "solution": {
           "thinking": "本題為正卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",

@@ -60,14 +60,15 @@
         ],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "\\frac{a + bi}{c + di} = \\frac{(a + bi)(c - di)}{c^2 + d^2}",
+            "z = x + yi \\implies \\bar{z} = x - yi",
+            "i^2 = -1"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>分母實數化化簡複數除法</b>：分子分母同乘以分母的共軛複數 $1 - 2i$，即 $\\frac{3 - i}{1 + 2i} = \\frac{(3 - i)(1 - 2i)}{1^2 + 2^2} = \\frac{3 - 6i - i - 2}{5} = \\frac{1 - 7i}{5} = \\frac{1}{5} - \\frac{7}{5}i$。",
+            "<b>共軛複數定義變換</b>：取共軛複數時實部不變、虛部變號，故 $\\bar{z} = \\frac{1}{5} + \\frac{7}{5}i$。"
           ],
-          "pitfall": "<b>忽略純虛數中虛部不為零</b>：若條件為「$z$ 為純虛數」，必須同時滿足 $\\text{Re}(z) = 0$ 且 $\\text{Im}(z) \\neq 0$！很多考生僅令實部為 0，未排除虛部為 0 的實數根（增根），痛失 1～2 分。"
+          "pitfall": "<b>求得 $z$ 後遺漏取共軛運算</b>：算出 $z = \\frac{1}{5} - \\frac{7}{5}i$ 後直接看選項，忘記題目所求為 $\\bar{z}$ 導致功虧一簣。"
         },
         "solution": {
           "thinking": "$z = \\frac{(3-i)(1-2i)}{(1+2i)(1-2i)} = \\frac{3 - 6i - i + 2i^2}{1 - 4i^2} = \\frac{1 - 7i}{5} = \\frac{1}{5} - \\frac{7}{5}i$。",
@@ -94,14 +95,14 @@
         ],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "z = a + bi \\text{ 為純虛數} \\iff a = 0 \\text{ 且 } b \\neq 0",
+            "m^2 - 4 = 0 \\implies m = \\pm 2; \\quad m + 2 \\neq 0 \\implies m \\neq -2"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>純虛數的充要條件雙重限制</b>：實部必須等於 0，同時虛部絕不能等於 0。若虛部等於 0 則複數變為實數 0。",
+            "<b>排除增根鎖定唯一解</b>：由實部 $m^2 - 4 = 0$ 得 $m = 2$ 或 $m = -2$；由虛部 $m + 2 \\neq 0$ 排除 $m = -2$，故 $m = 2$ 為唯一實數解。"
           ],
-          "pitfall": "<b>棣美弗定理開方遺漏週期性多解</b>：在求解 $z^n = w$ 時，很多考生僅算出主值對應的根，遺漏了加上 $\\frac{2k\\pi}{n}$ ($k = 0, 1, \\dots, n-1$) 得到的其餘 $n-1$ 個根。"
+          "pitfall": "<b>忽略虛部非零條件錯選 $m = -2$ 或 $\\pm 2$</b>：四校聯考最高頻陷阱之一，未檢驗 $b \\neq 0$ 的考生失分率高達 60%。"
         },
         "solution": {
           "thinking": "純虛數需實部為 0 且虛部不為 0：$m^2 - 4 = 0 \\implies m = \\pm 2$。",
@@ -137,14 +138,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "\\text{設 } z = x + yi \\ (x, y \\in \\mathbb{R}) \\implies \\bar{z} = x - yi",
+            "A + Bi = C + Di \\iff A = C \\text{ 且 } B = D",
+            "|z| = \\sqrt{x^2 + y^2}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>代數設元實虛部分離</b>：設 $z = x + yi$，代入原方程 $x + yi + 2(x - yi) = 3x - yi = 3 - 2i$。由實部與虛部對應相等，得聯立方程 $3x = 3, -y = -2 \\implies x = 1, y = 2$。",
+            "<b>求模長精確化簡</b>：解得 $z = 1 + 2i$，其模長為 $|z| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$。"
           ],
-          "pitfall": "<b>忽略純虛數中虛部不為零</b>：若條件為「$z$ 為純虛數」，必須同時滿足 $\\text{Re}(z) = 0$ 且 $\\text{Im}(z) \\neq 0$！很多考生僅令實部為 0，未排除虛部為 0 的實數根（增根），痛失 1～2 分。"
+          "pitfall": "<b>虛部負號比對出錯</b>：左端虛部為 $-y$，右端為 $-2$，解得 $y = 2$；若粗心將 $-y = -2$ 寫為 $y = -2$ 會導致整道題失分。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -179,14 +181,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "|z - z_0| = \\sqrt{(x - x_0)^2 + (y - y_0)^2}",
+            "|z - 1|^2 = 4|z - i|^2 \\implies (x - 1)^2 + y^2 = 4[x^2 + (y - 1)^2]",
+            "\\left(x + \\frac{1}{3}\\right)^2 + \\left(y - \\frac{4}{3}\\right)^2 = \\frac{8}{9}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>阿波羅尼奧斯圓軌跡推導</b>：幾何條件 $|z - 1| = 2|z - i|$ 表示平面動點到 $(1, 0)$ 與 $(0, 1)$ 的距離之比為定值 2，軌跡必為圓。",
+            "<b>兩邊平方展開配方標準式</b>：將模長化為坐標形式平方展開：$x^2 - 2x + 1 + y^2 = 4x^2 + 4y^2 - 8y + 4 \\implies 3x^2 + 3y^2 + 2x - 8y + 3 = 0$，同除以 3 配方得出圓心與半徑。"
           ],
-          "pitfall": "<b>忽略純虛數中虛部不為零</b>：若條件為「$z$ 為純虛數」，必須同時滿足 $\\text{Re}(z) = 0$ 且 $\\text{Im}(z) \\neq 0$！很多考生僅令實部為 0，未排除虛部為 0 的實數根（增根），痛失 1～2 分。"
+          "pitfall": "<b>右側平方忘記乘以 4</b>：原式為 $2|z - i|$，兩邊平方時容易只對括號平方而忘記係數 2 需平方為 4。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -208,14 +211,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "\\text{當 } z \\in \\mathbb{R} \\text{ 時, } z^2 + 2|z| - 3 = 0 \\implies (|z| + 3)(|z| - 1) = 0 \\implies |z| = 1 \\implies z = \\pm 1",
+            "\\text{當 } z = yi \\ (y \\neq 0) \\text{ 時, } -y^2 + 2|y| - 3 = 0 \\implies y^2 - 2|y| + 3 = 0 \\ (\\Delta < 0, \\text{無解})",
+            "z = r e^{i\\theta} \\implies r^2 e^{2i\\theta} + 2r - 3 = 0"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>實數根與虛數根分類討論</b>：若 $z \\in \\mathbb{R}$，方程化為一元二次方程，因模長 $|z| \\ge 0$，解得唯一有效值 $|z| = 1 \\implies z = \\pm 1$。",
+            "<b>複數形式代數求解</b>：設 $z = x + yi$，利用複數相等將實部與虛部拆為方程組，結合 $\\Delta < 0$ 排除純虛數解，得到全部解集合。"
           ],
-          "pitfall": "<b>棣美弗定理開方遺漏週期性多解</b>：在求解 $z^n = w$ 時，很多考生僅算出主值對應的根，遺漏了加上 $\\frac{2k\\pi}{n}$ ($k = 0, 1, \\dots, n-1$) 得到的其餘 $n-1$ 個根。"
+          "pitfall": "<b>混淆 $z^2$ 與 $|z|^2$</b>：$z^2$ 是複數自乘，可以為負數或包含虛數項；而 $|z|^2 = x^2 + y^2$ 恆為非負實數，切勿當成同一概念混用。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -238,14 +242,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "w = r(\\cos\\theta + i\\sin\\theta), \\quad r = |w| = \\sqrt{(-8)^2 + (8\\sqrt{3})^2} = 16",
+            "\\tan\\theta = \\frac{8\\sqrt{3}}{-8} = -\\sqrt{3}, \\ w \\text{ 在第二象限 } \\implies \\theta = \\frac{2\\pi}{3}",
+            "z_k = \\sqrt[4]{16}\\left[\\cos\\left(\\frac{2\\pi/3 + 2k\\pi}{4}\\right) + i\\sin\\left(\\frac{2\\pi/3 + 2k\\pi}{4}\\right)\\right], \\ k = 0, 1, 2, 3"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>幅角主值象限判定</b>：實部為負、虛部為正，點位於第二象限，幅角主值為 $\\pi - \\frac{\\pi}{3} = \\frac{2\\pi}{3}$。",
+            "<b>棣美弗定理（De Moivre's Theorem）開四次方</b>：四個根的模長均為 $\\sqrt[4]{16} = 2$，幅角分別為 $\\frac{\\pi}{6}, \\frac{2\\pi}{3}, \\frac{7\\pi}{6}, \\frac{5\\pi}{3}$，幾何上均勻分佈在複平面圓周上構成正方形。"
           ],
-          "pitfall": "<b>幅角主值範圍界定混淆</b>：四校聯考官方通常約定幅角主值 $\\text{Arg}(z) \\in (-\\pi, \\pi]$ 或 $[0, 2\\pi)$，在寫出三角形式時必須注意符號規範。\n\n---"
+          "pitfall": "<b>幅角主值取錯象限</b>：算得 $\\tan\\theta = -\\sqrt{3}$ 後直接寫 $-\\frac{\\pi}{3}$，未根據點位於第二象限進行調整修正。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -268,14 +273,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "z = r(\\cos \\theta + i \\sin \\theta)",
-            "[r(\\cos \\theta + i \\sin \\theta)]^n = r^n(\\cos n\\theta + i \\sin n\\theta) \\quad (n \\in \\mathbb{Z})"
+            "z^3 - 8 = (z - 2)(z^2 + 2z + 4) = 0 \\implies z_1 = 2, \\ z_{2,3} = -1 \\pm \\sqrt{3}i",
+            "\\omega = \\frac{-1 + \\sqrt{3}i}{2} \\implies \\omega^3 = 1, \\quad \\omega^2 + \\omega + 1 = 0",
+            "(1 + \\omega)^{10} = (-\\omega^2)^{10} = \\omega^{20} = (\\omega^3)^6 \\cdot \\omega^2 = \\omega^2 = \\frac{-1 - \\sqrt{3}i}{2}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>立方差因式分解與共軛複根</b>：$z^3 - 8 = 0$ 有一個實根 2 和兩個共軛虛根 $2\\omega, 2\\bar{\\omega}$，展示了實係數多項式虛根共軛成對出現的定理。",
+            "<b>1 的三次虛數單位根降次技巧</b>：利用 $1 + \\omega = -\\omega^2$ 與 $\\omega^3 = 1$ 將十次方降為二次方：$(-\\omega^2)^{10} = \\omega^{20} = \\omega^2$。"
           ],
-          "pitfall": "<b>忽略純虛數中虛部不為零</b>：若條件為「$z$ 為純虛數」，必須同時滿足 $\\text{Re}(z) = 0$ 且 $\\text{Im}(z) \\neq 0$！很多考生僅令實部為 0，未排除虛部為 0 的實數根（增根），痛失 1～2 分。"
+          "pitfall": "<b>負號在偶數次方展開時符號錯誤</b>：$(-\\omega^2)^{10} = (-1)^{10} \\omega^{20} = +\\omega^{20}$，容易誤加負號算成 $-\\omega^2$。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",

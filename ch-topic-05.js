@@ -60,14 +60,15 @@
         ],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "V_{\\text{球}} = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (3)^3 = 36\\pi \\text{ cm}^3",
+            "\\Delta V = \\pi r_{\\text{柱}}^2 \\Delta h \\implies 36\\pi = \\pi (4)^2 \\Delta h",
+            "\\Delta h = \\frac{36}{16} = \\frac{9}{4} = 2.25 \\text{ cm}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>排水等體積轉化法</b>：實心鐵球完全浸沒且水未溢出，水面上升排開的水的體積等於鐵球的體積 $V_{\\text{球}} = 36\\pi$。",
+            "<b>圓柱體積公式反解上升高度</b>：將排開體積代入底面積為 $\\pi (4)^2 = 16\\pi$ 的圓柱體積，得 $\\Delta h = \\frac{36\\pi}{16\\pi} = 2.25$ cm。"
           ],
-          "pitfall": "<b>二面角鈍角問題</b>：在應用空間向量法求二面角時，公式 $\\cos \\theta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$ 默認輸出銳角。如果幾何體內部該二面角張開超過 $90^\\circ$（鈍二面角），必須依據幾何直觀取負值 $\\cos \\theta = -\\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$，否則扣 1～2 分【A分】。"
+          "pitfall": "<b>球體積公式記混</b>：常有考生忘記係數 $\\frac{4}{3}$ 或將半徑立方記成平方，誤算為 $4\\pi r^2$（球表面積）。"
         },
         "solution": {
           "thinking": "鐵球體積 $V_{\\text{球}} = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (3)^3 = 36\\pi$。",
@@ -95,14 +96,15 @@
         ],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "V = \\pi r^2 h",
+            "V' = \\pi (r \\times 1.2)^2 (h \\times 0.8) = \\pi (1.44 r^2) (0.8 h) = 1.152 \\pi r^2 h",
+            "\\frac{V' - V}{V} = 1.152 - 1 = +15.2\\%"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>幾何體積比例非線性效應</b>：底半徑是二次方項，半徑增加 20% 使底面積擴大為 $1.2^2 = 1.44$ 倍；高為一次方項，高減少 20% 變為 $0.8$ 倍。",
+            "<b>體積變化計算</b>：新體積為原體積的 $1.44 \\times 0.8 = 1.152$ 倍，即體積增加 $15.2\\%$。"
           ],
-          "pitfall": "<b>空間建系未論證軸向互相垂直</b>：直接設立坐標系而不說明「因 $PA \\perp AB, PA \\perp AD, AB \\perp AD$，故以 $A$ 為原點建立空間直角坐標系」，會被嚴格扣除 1 分【M分】。"
+          "pitfall": "<b>直覺誤判「加20%又減20%體積不變」</b>：很多考生憑直覺選「不變」，忽略底面半徑二次方對體積的權重大於高的一次方向。"
         },
         "solution": {
           "thinking": "新半徑 $r' = 1.2r$，新高 $h' = 0.8h$。",
@@ -138,14 +140,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "\\text{空間建系：} D(0,0,0), \\ A(a,0,0), \\ C(0,a,0), \\ D_1(0,0,a)",
+            "l \\perp \\alpha \\iff \\vec{u} \\cdot \\vec{v}_1 = 0 \\text{ 且 } \\vec{u} \\cdot \\vec{v}_2 = 0 \\quad (\\vec{v}_1, \\vec{v}_2 \\text{ 相交})",
+            "\\sin\\theta = |\\cos\\langle \\vec{l}, \\vec{n} \\rangle| = \\frac{|\\vec{l} \\cdot \\vec{n}|}{|\\vec{l}| |\\vec{n}|}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考正卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>空間坐標建系證明線面垂直</b>：以頂點為原點建立空間直角坐標系，寫出各頂點與中點坐標。線面垂直等價於直線方向向量與平面內兩相交直線方向向量的數量積均為 0。",
+            "<b>線面角正弦轉化為法向量餘弦</b>：直線與平面的夾角 $\\theta$ 的正弦值等於直線方向向量與平面法向量夾角的餘弦絕對值。"
           ],
-          "pitfall": "<b>二面角鈍角問題</b>：在應用空間向量法求二面角時，公式 $\\cos \\theta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$ 默認輸出銳角。如果幾何體內部該二面角張開超過 $90^\\circ$（鈍二面角），必須依據幾何直觀取負值 $\\cos \\theta = -\\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$，否則扣 1～2 分【A分】。"
+          "pitfall": "<b>線面角正弦與餘弦公式搞混</b>：線面角的正弦對應法向量夾角的餘弦，切勿直接把兩向量夾角的餘弦當作線面角的餘弦。"
         },
         "solution": {
           "thinking": "本題為正卷大題（8 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -180,14 +183,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "\\text{三垂線定理：} PA \\perp \\text{底面}, \\ AB \\perp BC \\implies PB \\perp BC",
+            "\\cos\\theta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| |\\vec{n}_2|} \\quad (\\text{二面角平面角餘弦})",
+            "d = \\frac{|\\vec{AP} \\cdot \\vec{n}|}{|\\vec{n}|} \\quad (\\text{點到平面的向量距離公式})"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>空間直角坐標系建系求二面角</b>：以直角頂點 $A$ 為原點建系，分別求出兩個半平面的法向量 $\\vec{n}_1, \\vec{n}_2$，代入法向量夾角公式直接求解二面角。",
+            "<b>點面距離的向量投影公式</b>：任取平面內一點 $A$，點 $P$ 到平面的距離即為向量 $\\vec{AP}$ 在法向量 $\\vec{n}$ 上的投影長度。"
           ],
-          "pitfall": "<b>二面角鈍角問題</b>：在應用空間向量法求二面角時，公式 $\\cos \\theta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$ 默認輸出銳角。如果幾何體內部該二面角張開超過 $90^\\circ$（鈍二面角），必須依據幾何直觀取負值 $\\cos \\theta = -\\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$，否則扣 1～2 分【A分】。"
+          "pitfall": "<b>二面角是銳角還是鈍角判斷</b>：法向量夾角需結合空間幾何圖形判定二面角是銳角還是鈍角，若為鈍角需取補角。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -211,14 +215,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "PA \\perp AB, \\ PA \\perp AC \\implies PA \\perp \\text{平面 } ABC \\implies PA \\perp BC",
+            "BC \\perp AB, \\ BC \\perp PA \\implies BC \\perp \\text{平面 } PAB \\implies BC \\perp PB",
+            "V_{P-ABC} = \\frac{1}{3} S_{\\triangle ABC} \\cdot PA = \\frac{1}{6} |PA| |AB| |BC|"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>線面垂直傳遞性與三直角四面體</b>：四面體三組棱互相垂直，由線面垂直判定定理快速推出 $BC \\perp$ 平面 $PAB$，進而得出 $BC \\perp PB$。",
+            "<b>直角底面求棱錐體積</b>：以直角三角形 $ABC$ 為底面，$PA$ 為高，體積等於三條互相垂直邊長乘積的六分之一。"
           ],
-          "pitfall": "<b>空間建系未論證軸向互相垂直</b>：直接設立坐標系而不說明「因 $PA \\perp AB, PA \\perp AD, AB \\perp AD$，故以 $A$ 為原點建立空間直角坐標系」，會被嚴格扣除 1 分【M分】。"
+          "pitfall": "<b>二面角平面角找錯頂點</b>：求二面角 $P-AC-B$ 時，必須從兩半平面分別向交線 $AC$ 作垂線，垂足必須重合於同一點。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -241,14 +246,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "AC \\perp BD \\quad (\\text{菱形對角線互相垂直})",
+            "EA \\perp \\text{底面} \\implies EA \\perp AC \\implies AC \\perp \\text{平面 } EBD \\implies AC \\perp ED",
+            "d = \\frac{|\\vec{AB} \\cdot \\vec{n}|}{|\\vec{n}|}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>菱形底面幾何性質直接證線線垂直</b>：菱形對角線垂直 $AC \\perp BD$，且高線 $EA \\perp AC$，故 $AC$ 垂直於相交線 $BD$ 與 $EA$ 構成的平面 $EBD$，直接得出 $AC \\perp ED$。",
+            "<b>待定係數法求法向量</b>：設法向量 $\\vec{n} = (x, y, z)$，聯立與兩向量數量積為 0，令 $z = 1$ 解出法向量坐標。"
           ],
-          "pitfall": "<b>等體積法底面積計算出錯</b>：在使用等體積法求高時，忘記錐體體積公式中的 $\\frac{1}{3}$，或者斜面三角形面積用錯底與高。\n\n---"
+          "pitfall": "<b>菱形建系夾角非直角</b>：菱形內角為 $60^\\circ$ 非直角，切勿直接把 $AB$ 與 $AD$ 設為直角坐標軸，應以對角線交點或垂足建系。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -271,14 +277,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "PA \\perp \\text{底面}, \\ AB \\perp BC \\implies PB \\perp BC \\quad (\\text{三垂線定理})",
+            "\\sin\\phi = \\frac{|\\vec{l} \\cdot \\vec{n}|}{|\\vec{l}| |\\vec{n}|} = \\frac{|BC|}{|PC|} \\quad (\\text{線面角})",
+            "V = \\frac{1}{3} S_{\\triangle ABC} \\cdot PA = \\frac{1}{3} S_{\\triangle PAC} \\cdot h_B \\implies h_B = \\frac{S_{\\triangle ABC} \\cdot PA}{S_{\\triangle PAC}}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>等體積法秒殺點面距離</b>：求點 $B$ 到平面 $PAC$ 的距離時，利用三棱錐體積 $V_{B-PAC} = V_{P-ABC}$，避免作輔助垂線或求複雜法向量。",
+            "<b>線面角射影直觀識別</b>：因 $BC \\perp$ 平面 $PAB$，點 $C$ 在平面 $PAB$ 上的射影為 $B$，直線 $PC$ 與平面的夾角即為 $\\angle CPB$。"
           ],
-          "pitfall": "<b>二面角鈍角問題</b>：在應用空間向量法求二面角時，公式 $\\cos \\theta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$ 默認輸出銳角。如果幾何體內部該二面角張開超過 $90^\\circ$（鈍二面角），必須依據幾何直觀取負值 $\\cos \\theta = -\\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1||\\vec{n}_2|}$，否則扣 1～2 分【A分】。"
+          "pitfall": "<b>求線面角時誤算成 $\\angle PCB$</b>：線面角的頂點在直線與平面的交點 $P$ 處，角度應為直角三角形中的 $\\angle BPC$。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
@@ -301,14 +308,15 @@
         "options": [],
         "knowledge": {
           "formulas": [
-            "V = \\frac{1}{3} S_{\\text{底}} \\cdot h",
-            "V_{A-BCD} = V_{D-ABC} \\iff \\frac{1}{3} S_{\\triangle BCD} \\cdot d = \\frac{1}{3} S_{\\triangle ABC} \\cdot h_D \\implies d = \\frac{S_{\\triangle ABC} \\cdot h_D}{S_{\\triangle BCD}}"
+            "\\text{等邊 } \\triangle VAD \\perp \\text{底面}, \\ O \\text{ 為 } AD \\text{ 中點} \\implies VO \\perp \\text{底面}, \\ VO = \\frac{\\sqrt{3}}{2}a",
+            "\\tan\\theta = \\frac{VO}{|OC|} = \\frac{\\frac{\\sqrt{3}}{2}a}{\\sqrt{2^2 + (\\frac{a}{2})^2}}",
+            "\\cos\\alpha = \\frac{\\vec{n}_1 \\cdot \\vec{n}_2}{|\\vec{n}_1| |\\vec{n}_2|}"
           ],
           "points": [
-            "<b>命題規律</b>：澳門四校聯考附加卷核心高頻考點，著重考查數形結合與運算求解耐力。",
-            "<b>解題思路</b>：精確審題，捕捉隱含條件，按標準題型範式規範化推演。"
+            "<b>面面垂直引出空間高線</b>：等邊三角形面垂直於矩形底面，取交線 $AD$ 中點 $O$，則 $VO \\perp$ 底面，以 $O$ 為原點建立空間直角坐標系最簡便。",
+            "<b>含參幾何向量求解</b>：各點坐標與法向量均含有參數 $a$，根據題目給定的二面角角度列出方程反解參數 $a$ 的取值範圍。"
           ],
-          "pitfall": "<b>空間建系未論證軸向互相垂直</b>：直接設立坐標系而不說明「因 $PA \\perp AB, PA \\perp AD, AB \\perp AD$，故以 $A$ 為原點建立空間直角坐標系」，會被嚴格扣除 1 分【M分】。"
+          "pitfall": "<b>等邊三角形高線公式計算失誤</b>：邊長為 $a$ 的等邊三角形高為 $\\frac{\\sqrt{3}}{2}a$，容易誤寫為 $\\frac{1}{2}a$ 或 $\\sqrt{3}a$。"
         },
         "solution": {
           "thinking": "本題為附加卷大題（20 分），考查多步推理與嚴謹踩點評分，包含 M分（方法分）、A分（精確分）與 B分（獨立分）。",
